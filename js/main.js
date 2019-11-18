@@ -187,6 +187,7 @@ document.addEventListener('keypress', key => {
 const update = () => {
   if((Math.max(ships[0].life, ships[1].life) === 0) || (enemies[enemies.length - 1].y + enemies[enemies.length - 1].h >= canvas.height - 50)){
     gameOver()
+    return
   }
   ctx.fillStyle = 'black'
   ctx.clearRect(0, 0, canvas.width, canvas.height)
